@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
+import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import "./InfoBox.css"
 
 export default function InfoBox({info}){
@@ -45,10 +47,10 @@ const rain="#636d83";
 
                 </Typography>
                 <Typography variant="body2" component="span" id= "description">
-                   <p style={{color:"#a0153e"}}> Temperature = {info.temp}&deg;C</p>
-                   <p style={{color:"#008194"}}> Humidity = {info.humidity}</p>
-                   <p style={{color:"#003c54"}}> Minimum Temperature = {info.tempMin}</p>
-                   <p style={{color:"#f69000"}}> Maximum Temperature = {info.tempMax}</p>
+                   <p style={{color:"#a0153e"}}> <ThermostatIcon/> Temperature = {info.temp}&deg;C</p>
+                   <p style={{color:"#008194"}}> <WaterDropIcon/> Humidity = {info.humidity}</p>
+                   <p style={{color:"#003c54"}}> <AcUnitIcon/> Minimum Temperature = {info.tempMin}</p>
+                   <p style={{color:"#f69000"}}> <WbSunnyIcon/> Maximum Temperature = {info.tempMax}</p>
                    <p> The weather can be described as <i style={{color:"#226ba3"}}>{info.weather}</i> and feels like  <i style={{color:"#226ba3"}}>{info.feelsLike}&deg;C</i></p>
                 </Typography>
             </CardContent>
